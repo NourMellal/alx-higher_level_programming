@@ -6,4 +6,3 @@ def no_c(my_string):
             print(i)
             new_str += i
     return new_str
-
