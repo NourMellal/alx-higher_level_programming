@@ -1,8 +1,6 @@
 #include"lists.h"
 
 int is_palindrome(listint_t **head);
-listint_t *reverse_list(listint_t **head);
-
 
 listint_t *reverse_list(listint_t **head)
 {
