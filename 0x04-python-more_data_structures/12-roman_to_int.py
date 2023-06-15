@@ -3,7 +3,7 @@ def roman_to_int(roman_string):
     if (not isinstance(roman_string, str) or roman_string == ""):
         return 0
 
-    dic_roman = {
+    dic = {
         "I": 1,
         "V": 5,
         "X": 10,
@@ -15,11 +15,11 @@ def roman_to_int(roman_string):
     num = 0
 
     for i in range(len(roman_string)):
-        if dic_roman.get(roman_string[i], 0) == 0:
+        if dic.get(roman_string[i], 0) == 0:
             return 0
         if (i != (len(roman_string) - 1)) and\
-            dic_roman[roman_string[i]] < dic_roman[roman_string[i + 1]]:
-            num += dic_roman[roman_string[i]] * -1
+            dic[roman_string[i]] < dic[roman_string[i + 1]]:
+            num += dic[roman_string[i]] * -1
         else:
-            num += dic_roman[roman_string[i]]
+            num += dic[roman_string[i]]
     return num
