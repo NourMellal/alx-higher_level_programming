@@ -147,6 +147,12 @@ class Rectangle:
                 rect.append("\n")
         return "".join(rect)
 
+    def square(cls, size=0):
+        """
+        return size for both fize tnad weidth
+        """
+        return cls(size, size)
+
     def __repr__(self):
         """Return the string Representaion of the rectangle"""
         rect = "Rectangle(" + str(self.__width) + ", "
