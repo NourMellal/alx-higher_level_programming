@@ -147,6 +147,7 @@ class Rectangle:
                 rect.append("\n")
         return "".join(rect)
 
+    @classmethod
     def square(cls, size=0):
         """
         return size for both fize tnad weidth
