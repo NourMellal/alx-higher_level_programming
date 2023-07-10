@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""module 4: 4-inhertis_from.py"""
+
 
 def inherits_from(obj, a_class):
     """
