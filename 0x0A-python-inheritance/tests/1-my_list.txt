@@ -40,3 +40,23 @@
 >>> sys.stdout = sys.__stdout__
 >>> print(out.getvalue())
 [1, 1, 1, 1]
+
+# Test with a list of characters
+>>> m = MyList()
+>>> m.extend(['a', 'b', 'c'])
+>>> out = StringIO()
+>>> sys.stdout = out
+>>> m.print_sorted()
+>>> sys.stdout = sys.__stdout__
+>>> print(out.getvalue())
+['a', 'b', 'c']
+
+# Test with a list of negative integers
+>>> m = MyList()
+>>> m.extend([-3, -2, -1])
+>>> out = StringIO()
+>>> sys.stdout = out
+>>> m.print_sorted()
+>>> sys.stdout = sys.__stdout__
+>>> print(out.getvalue())
+[-3, -2, -1]
