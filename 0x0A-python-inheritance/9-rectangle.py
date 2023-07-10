@@ -12,7 +12,7 @@ class Rectangle(BaseGeometry):
     """
 
     def __init__(self, width, height):
-        """ Concontructor and width, height """
+        """Concontructor and width, height"""
         self.integer_validator("height", height)
         self.integer_validator("width", width)
 
@@ -20,11 +20,17 @@ class Rectangle(BaseGeometry):
         self.__height = height
 
     def area(self):
-        """ Return: Area of rectangle"""
+        """Return: Area of rectangle"""
         return self.__width * self.__height
 
     def __str__(self):
-        """ return  rectangle description: [Rectangle] <width>/<height> """
-        strn = "[" + str(self.__class__.__name__) + "]"
+        """return  rectangle description: [Rectangle] <width>/<height>"""
+        strn = "[" + str(self.__class__.__name__) + "] "
         strn += str(self.__width) + "/" + str(self.__height)
         return strn
+
+
+r = Rectangle(3, 5)
+
+print(r)
+print(r.area())
