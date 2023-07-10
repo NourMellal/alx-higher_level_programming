@@ -1,62 +1,32 @@
->>> from io import StringIO
->>> import sys
->>> MyList = __import__("1-my-list").MyList
+The ``1-my_list`` module
+===================
 
-# Test with a list of integers in descending order
->>> m = MyList()
->>> m.extend([3, 2, 1])
->>> out = StringIO()
->>> sys.stdout = out
->>> m.print_sorted()
->>> sys.stdout = sys.__stdout__
->>> print(out.getvalue())
-[1, 2, 3]
+Test to 1-my_list - module
+-------------------
 
-# Test with a list of integers in random order
->>> m = MyList()
->>> m.extend([10, 5, 7, 3, 1])
->>> out = StringIO()
->>> sys.stdout = out
->>> m.print_sorted()
->>> sys.stdout = sys.__stdout__
->>> print(out.getvalue())
-[1, 3, 5, 7, 10]
+import:
+>>> MyList = __import__("1-my_list").MyList
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> my_list.print_sorted()
+[1, 2, 3, 4, 5]
 
-# Test with an empty list
->>> m = MyList()
->>> out = StringIO()
->>> sys.stdout = out
->>> m.print_sorted()
->>> sys.stdout = sys.__stdout__
->>> print(out.getvalue())
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+>>> my_list = MyList("halwa")
+
+>>> my_list
+['h', 'a', 'l', 'w', 'a']
+
+>>> my_list.print_sorted()
+['a', 'a', 'h', 'l', 'w']
+
+>>> my_list = MyList()
+
+>>> my_list.print_sorted()
 []
-
-# Test with a list that contains the same integers
->>> m = MyList()
->>> m.extend([1, 1, 1, 1])
->>> out = StringIO()
->>> sys.stdout = out
->>> m.print_sorted()
->>> sys.stdout = sys.__stdout__
->>> print(out.getvalue())
-[1, 1, 1, 1]
-
-# Test with a list of characters
->>> m = MyList()
->>> m.extend(['a', 'b', 'c'])
->>> out = StringIO()
->>> sys.stdout = out
->>> m.print_sorted()
->>> sys.stdout = sys.__stdout__
->>> print(out.getvalue())
-['a', 'b', 'c']
-
-# Test with a list of negative integers
->>> m = MyList()
->>> m.extend([-3, -2, -1])
->>> out = StringIO()
->>> sys.stdout = out
->>> m.print_sorted()
->>> sys.stdout = sys.__stdout__
->>> print(out.getvalue())
-[-3, -2, -1]
