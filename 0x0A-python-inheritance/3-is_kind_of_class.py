@@ -2,7 +2,7 @@
 """Define class that check the function"""
 
 
-def is_same_class(obj, a_class):
+def is_kind_of_class(obj, a_class):
     """
     Check if an object is exactly an instance of a specific class.
 
