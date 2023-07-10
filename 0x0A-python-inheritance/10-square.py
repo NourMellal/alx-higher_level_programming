@@ -4,7 +4,9 @@
 """
 
 Rectangle = __import__("9-rectangle").Rectangle
-
+"""
+    super class
+"""
 
 class Square(Rectangle):
     """
