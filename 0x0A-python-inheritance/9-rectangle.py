@@ -28,9 +28,3 @@ class Rectangle(BaseGeometry):
         strn = "[" + str(self.__class__.__name__) + "] "
         strn += str(self.__width) + "/" + str(self.__height)
         return strn
-
-
-r = Rectangle(3, 5)
-
-print(r)
-print(r.area())
